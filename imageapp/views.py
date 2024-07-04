@@ -1314,7 +1314,7 @@ torch.set_default_tensor_type(torch.FloatTensor)
 # generator = Generator().cuda()
 # generator.load_state_dict(torch.load("generator_795.pth"))
 import os
-dir_path = os.path.dirname(os.path.realpath(__file__)) + "\generator_795.pth"
+dir_path = os.path.dirname(os.path.realpath(__file__)) + "generator_795.pth"
 print(dir_path)
 
 generator = Generator()
