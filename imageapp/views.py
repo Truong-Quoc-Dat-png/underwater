@@ -1315,7 +1315,7 @@ torch.set_default_tensor_type(torch.FloatTensor)
 # generator.load_state_dict(torch.load("generator_795.pth"))
 
 generator = Generator()
-generator.load_state_dict(torch.load("imageapp\generator_795.pth", map_location=torch.device('cpu')))
+generator.load_state_dict(torch.load("/imageapp/generator_795.pth", map_location=torch.device('cpu')))
 generator.eval()
 
 
