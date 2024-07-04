@@ -1,2 +1,4 @@
 django
 pillow
+cv2
+torch
