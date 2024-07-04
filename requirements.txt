@@ -1,4 +1,4 @@
 django
 pillow
-cv2
+opencv-python
 torch
