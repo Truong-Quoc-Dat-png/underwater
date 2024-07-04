@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image List</title>
+</head>
+<body>
+    <h2>Image List</h2>
+    <ul>
+        {% for image in images %}
+        <li>
+            {{ image.title }} <br>
+            <img src="{{ image.image.url }}" width="100"><br>
+            <a href="{% url 'process_image' image.id %}">Process Image</a> |
+            <a href="{% url 'download_image' image.id %}">Download Image</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'upload_image' %}">Upload another image</a>
+</body>
+</html>
