@@ -1317,9 +1317,9 @@ import os
 dir_path = os.path.dirname(os.path.realpath(__file__)) + "/generator_795.pth"
 print(dir_path)
 
-generator = Generator()
-generator.load_state_dict(torch.load(dir_path, map_location=torch.device('cpu')))
-generator.eval()
+# generator = Generator()
+# generator.load_state_dict(torch.load(dir_path, map_location=torch.device('cpu')))
+# generator.eval()
 
 
 
@@ -1352,8 +1352,8 @@ def process_image(request, image_id):
     imgx = imgx.permute(2,0,1).unsqueeze(0)
     imgx = imgx/255.0
     imgx = Variable(imgx)
-    output = generator(imgx)
-    imgx = output[3].data
+    # output = generator(imgx)
+    # imgx = output[3].data
 
 
 
