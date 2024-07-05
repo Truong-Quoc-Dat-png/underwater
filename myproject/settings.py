@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-gtd-veb^-(7=i3fgp(%=3*j5q1h^(*7+@h8brpnt*&^727iskb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['truong-quoc-dat-png.github.io]
 
 
 # Application definition
