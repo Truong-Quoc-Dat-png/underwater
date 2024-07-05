@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    {% load static %}
+    <title>Image List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/image_list.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>Image List</h1>
+        <div class="user-info">
+            <span>Welcome, {{ user.username }}!</span>
+            <button id="logout-button">Logout</button>
+        </div>
+    </header>
+    <div class="upload-button-container">
+        <a href="{% url 'upload_image' %}" class="upload-button">Upload another image</a>
+    </div>
+    <div class="container">
+        <div class="grid-container">
+            {% for image in images %}
+            <div class="grid-item">
+                <p>{{ image.title }}</p>
+                <img src="{{ image.image.url }}" alt="{{ image.title }}">
+                <div>
+                    <a href="{% url 'process_image' image.id %}">Process Image</a> |
+                    <a href="{% url 'download_image' image.id %}">Download Image</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('logout-button').addEventListener('click', function () {
+            if (confirm('Are you sure you want to logout?')) {
+                window.location.href = "{% url 'login' %}";
+            }
+        });
+    </script>
+</body>
+
+</html>
